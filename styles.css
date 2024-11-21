@@ -72,3 +72,21 @@ li:last-child {
     color: #535353; /* Dark gray text */
     opacity: 0.7; /* Light gray text */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+menu-link {
+    display: block;
+    padding: 10px 20px;
+    color: #d8efff;
+    text-decoration: none;
+}
+.game-gif {
+    width: 300px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px auto; /* Center the image */
+}
