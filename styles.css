@@ -76,6 +76,7 @@ li:last-child {
 .two-columns {
     display: flex; /* Creates a flex container */
     gap: 20px; /* Adds space between columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .column {
@@ -97,7 +98,8 @@ html {
 }
 
 .game-gif {
-    width: 300px; /* Adjust the width */
+    width: 100%; /* Full width for small screens */
+    max-width: 300px; /* Limit size on larger screens */
     height: auto; /* Maintain aspect ratio */
     border: 2px solid #ccc; /* Optional border */
     border-radius: 10px; /* Rounded corners */
@@ -141,4 +143,31 @@ body.dark-mode a:hover {
 
 body.dark-mode .column {
     border: 1px solid #444444; /* Darker border for columns */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 10px; /* Smaller gap */
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    button {
+        font-size: 16px; /* Slightly larger for touch devices */
+        width: auto; /* Keep button size dynamic */
+    }
+
+    .game-gif {
+        width: 100%; /* Full width for small screens */
+        max-width: 100%; /* Remove size restriction */
+    }
 }
