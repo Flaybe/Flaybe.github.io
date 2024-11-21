@@ -1,4 +1,5 @@
 body {
+
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -48,4 +49,26 @@ ul {
 
 li {
     margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Thin gray line */
+}
+
+li:last-child {
+    border-bottom: none; /* Remove the border for the last item */
+}
+.two-columns {
+    display: flex; /* Creates a flex container */
+    gap: 20px; /* Adds space between columns */
+}
+
+.column {
+    flex: 1; /* Each column takes equal space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.anti-highlight {
+    font-weight: normal; /* Removes boldness */
+    color: #535353; /* Dark gray text */
+    opacity: 0.7; /* Light gray text */
 }
